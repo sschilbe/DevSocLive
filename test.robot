@@ -20,10 +20,10 @@ Test Teardown  Run keywords     Signout     Close test browser
 *** Variables ***
 
 ${CREDENTIALS}  2122e75ff30e9d779ef243512bd9af23:47c920ba52c79428dc35680245a22a04
-${ROOT_URL}     https://swe4103-seminar.herokuapp.com/
-${LOGIN_URL}    ${ROOT_URL}sessions/login
-${LOGOUT_URL}   ${ROOT_URL}sessions/logout
-${HOME_URL}     ${ROOT_URL}sessions/home
+${ROOT_URL}     https://swe4203-seminar.herokuapp.com
+${LOGIN_URL}    ${ROOT_URL}/login
+${LOGOUT_URL}   ${ROOT_URL}/logout
+${HOME_URL}     ${ROOT_URL}/index
 
 *** Keywords ***
 
@@ -39,10 +39,10 @@ Close test browser
 	Close all browsers
 
 Sign In
-    [Arguments]     ${email}        ${password}
+    [Arguments]     ${username}     ${password}
     Go To           ${LOGIN_URL}
-    Input Text      email           ${email}
-    Input Text      login_password  ${password}
+    Input Text      username        ${username}
+    Input Text      password        ${password}
     Click Button    commit
     
 Sign Out 
@@ -53,19 +53,19 @@ Sign Out
 Simple Test
     [Tags]  Validation
     Go to   ${ROOT_URL}
-	Page should contain  Soccer League Manager
+	Page should contain  Please log in to access this page.
 
-A user should be able to sign in with valid email and password
-    Sign In  seth.schilbe@gmail.com  password
+A user should be able to sign in with valid username and password
+    Sign In  Seth Schilbe  password
     ${url}=     Get Location
     Should be Equal     ${url}     ${HOME_URL}
 
-A user shouldn't be able to sign in with invalid email
+A user shouldn't be able to sign in with invalid username
     Sign In     hello  password
     ${url}=     Get Location
     Should be Equal     ${url}     ${LOGIN_URL}
 
 A user shouldn't be able to sign in with invalid password
-    Sign In  seth.schilbe@gmail.com  this_is_wrong
+    Sign In  Seth Schilbe  this_is_wrong
     ${url}=     Get Location
     Should be Equal     ${url}     ${LOGIN_URL}

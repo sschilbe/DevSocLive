@@ -10,22 +10,23 @@ script:
   - pytest -v
 
 jobs:
-  - stage: deploy to staging
-    deploy:
-      provider: heroku
-      api_key:
-        secure: SM45JtphY5pAsSPzjDrO8SIajZwP4vCmUsO1AoRS+C7WMWMnQfKJIuOQ174oukMeAraXFN210++lUTyYkQDqZUo9bNUvIIZnmiNRHCW+/MpMJ587RjTNiaODeBmcEVEZENJi+8Sfo5xd6V/Ewr4pgI4BL4xDXRpfzW4MQSw+vUCNz4lf1mB9LIV1FJHtnwkiZf4mLloZQ72gdiSAM4RNU+3GkxmNKUlz1s2BbTUujzVm0xCBfFbBngXDbirsVPBBCEPD2MkG47gDXQcA6evPRsxnNtn/iF7QKT3AF0Z4KDR6tB2PgZpQUP//Wa+2lA79bAFidslVSL4u/2AjygJtqtdvZP/9enyvJhY07BYW2ZwblAKfAZASD+fl1hcGMEwM4RPtL2QhWq7gShDLvhjVQU7IcGsjuglHpLRKE31qUogGlyBgmYlWu++sQYh/uMbhHfFLx8YTVnxbYFhCxG82XRXQI3Ch9kB0LKnSyBE0MWVrYjmAftVVtzR32wJBmgMNYs1HwD92f7XCIJ5Cxmfyc7f5Fp5CT2IdBBH7U6KEWHzhTBQ9E1O1E6prBgqew07A1hxF9U+HxhHUwzj/UNsunt647gDBs4cSuh0R6s22JUCNDOaoYn5+gMvpoJS8HUSCk1Qhl7+B+mcelbBtK/VqvMtcSDHJHxjiVqvcqT4TdpY=
-      app:
-        master: SWE4203_SEMINAR
-      on:
-        repo: sschilbe/swe4203-seminar
-  - stage: test staging
-    before_install:
-      - apt-get update
-    install:
-      - pip install robotframework
-      - pip install --upgrade requests
-      - pip install robotframework-selenium2library
-      - pip install --upgrade urllib3
-    script:
-      - pybot --variable BROWSER:chrome --variable VERSION:latest --variable PLATFORM:MAC test.robot
+  include:
+    - stage: deploy to staging
+      deploy:
+        provider: heroku
+        api_key:
+          secure: SM45JtphY5pAsSPzjDrO8SIajZwP4vCmUsO1AoRS+C7WMWMnQfKJIuOQ174oukMeAraXFN210++lUTyYkQDqZUo9bNUvIIZnmiNRHCW+/MpMJ587RjTNiaODeBmcEVEZENJi+8Sfo5xd6V/Ewr4pgI4BL4xDXRpfzW4MQSw+vUCNz4lf1mB9LIV1FJHtnwkiZf4mLloZQ72gdiSAM4RNU+3GkxmNKUlz1s2BbTUujzVm0xCBfFbBngXDbirsVPBBCEPD2MkG47gDXQcA6evPRsxnNtn/iF7QKT3AF0Z4KDR6tB2PgZpQUP//Wa+2lA79bAFidslVSL4u/2AjygJtqtdvZP/9enyvJhY07BYW2ZwblAKfAZASD+fl1hcGMEwM4RPtL2QhWq7gShDLvhjVQU7IcGsjuglHpLRKE31qUogGlyBgmYlWu++sQYh/uMbhHfFLx8YTVnxbYFhCxG82XRXQI3Ch9kB0LKnSyBE0MWVrYjmAftVVtzR32wJBmgMNYs1HwD92f7XCIJ5Cxmfyc7f5Fp5CT2IdBBH7U6KEWHzhTBQ9E1O1E6prBgqew07A1hxF9U+HxhHUwzj/UNsunt647gDBs4cSuh0R6s22JUCNDOaoYn5+gMvpoJS8HUSCk1Qhl7+B+mcelbBtK/VqvMtcSDHJHxjiVqvcqT4TdpY=
+        app:
+          master: SWE4203_SEMINAR
+        on:
+          repo: sschilbe/swe4203-seminar
+    - stage: test staging
+      before_install:
+        - apt-get update
+      install:
+        - pip install robotframework
+        - pip install --upgrade requests
+        - pip install robotframework-selenium2library
+        - pip install --upgrade urllib3
+      script:
+        - pybot --variable BROWSER:chrome --variable VERSION:latest --variable PLATFORM:MAC test.robot
