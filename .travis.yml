@@ -22,11 +22,11 @@ jobs:
           repo: sschilbe/swe4203-seminar
     - stage: test staging
       before_install:
-        - apt-get update
+        - sudo apt-get update
       install:
         - pip install robotframework
         - pip install --upgrade requests
         - pip install robotframework-selenium2library
         - pip install --upgrade urllib3
       script:
-        - pybot --variable BROWSER:chrome --variable VERSION:latest --variable PLATFORM:MAC test.robot
+        - robot --variable BROWSER:chrome --variable VERSION:latest --variable PLATFORM:MAC test.robot

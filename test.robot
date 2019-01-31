@@ -12,7 +12,7 @@ Documentation   A test suite with various tests for login.
     ...         user present in the database  
 
 Library  Selenium2Library
-Library  TestingBot
+Library  ./TestingBot
 
 Test Setup  Open test browser
 Test Teardown  Run keywords     Signout     Close test browser
