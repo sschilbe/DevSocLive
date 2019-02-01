@@ -16,8 +16,6 @@ jobs:
       on:
         repo: sschilbe/SWE4203_SEMINAR
   - stage: test staging
-    before_install:
-    - sudo apt-get update
     install:
     - pip install robotframework
     - pip install --upgrade requests
