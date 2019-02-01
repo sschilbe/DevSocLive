@@ -10,10 +10,11 @@ jobs:
   include:
   - stage: deploy to staging
     deploy:
+      provider: heroku
       api_key:
-        secure: F4iw5vBk0vlxpdwqMnax+5MsIN76pmF/SY51Ksy9NegZ1rp5pCZ3bt2hUb2ItKxKKbnCw7DuNYFoGc627cWW3/66EFsI0Q4RHnyNqZ4+4LA7CFBngZeRKhRw58ZrqjBLjl9sZ76MHwx4bOLPdkLrwWrRGJm8+RHa17gRwbTHtvs4Mqn1aiSd/eTK4ZpNrDeHh0KzdkJED/OJwCe4GN3cFuskaWCV6Ry9Hz9OPTBvBVOQx/shxgSFgeXLfADAgnM1wx/0ojE6PziNcNkzw3UYYunw+HFgQg/AOaUy7yf7DLBtiK9jiz/rRCXKfNxmZtYghf2UNjn9Ik/LVlMB/05qe/svNnEgBBZ9KnNu/JWjn4frXawvl5zoYg2HCJdy7AJELLf4suE6RBjZrIfB6EpI6GUax1f830QDoQsWAI5brWRPyCzfc2m9Pn4FZQNc/rhzRXg8pVRqIey1mzYVvXVB5mA4CbzfBCnep2Vkvsvx1USqInJPW63hX77VxLVrGVnJkmkQCHGofa3zVdFnWQDWMvMq3gGcKLm+E+SCaN7pbKG+oNukY0obJ5VVkM3dYh4jhvNWULexxevFNtMgsK/4eL1U93ed6hnAiXQAYhVnIK+dmLOxXN9vscbRQw2kMsx7+WDP1R5hTCFrqSec9Ni+shPSdfbPktlsU71eGEpgdSM=
+        secure: Ef4xK2jyKNjPqGKDPlSlMHdv+EO/kVIrWv3XquNAC57eyT2kRVfp08l0NKr9mJ7sB8yl2Bl02xgJCnHCc7ItKGHk+cUx4pC5vn0RdKJV+DVcs9hWcAIbP8o4h6YFT/Eo56U7Q6sxeOes5CCbOBkqcmax30MqVaBbF/xvCE/kaiNeKLvDWNPlPkamwhlRKzyOoS0MWRhUVxKJu/CQaE/DVU9wtg82fikkCuLohHOAFF3xxMPhc35k81hsdnaDS9sei6oTPcMAn+tUInz8tkSHpF1pKkVF5qQniEWLKC7nzvBiNceFSsD6J7AlXC5jshPs7vJLMkyktIJ4bhzuimHZnpXI+cJAjbJFK2Gs3gOUyYaGCNSzUFwuFsL4o5PGOX9ZgIqHaBRJ2lW82F49RcbkyP7DN+6NioYAtqXN5kxTk48XyV/pQelJvJwgOUKZXcrme2ZAoQialmA2hhij9lwIOforq0GORIkgxz2+vH7ZPKD+5lnKM00qg/vsyvIx7KYsH2eEYJq4iZH83+tjMYH8d92ScFw3vv1MI3CNjw0XLkwyyKkrvujiBWJRiCIK6gE3TELihI6hEUQxxRuMzusHaz5gR1+0z2JYPkmSrX4akk+CptU130zDzb0QddiZDMkvgr7xL1efSJQekfFwH5QVihvZPTjh4sOq7MM3pIINaso=
       app:
-        master: SWE4203_SEMINAR
+        master: swe4203-seminar
       on:
         repo: sschilbe/SWE4203_SEMINAR
   - stage: test staging
@@ -23,4 +24,5 @@ jobs:
     - pip install robotframework-selenium2library
     - pip install --upgrade urllib3
     script:
-    - robot --variable BROWSER:chrome --variable VERSION:latest --variable PLATFORM:MAC test.robot
+    - robot --variable BROWSER:chrome --variable VERSION:latest --variable PLATFORM:MAC
+      test.robot
