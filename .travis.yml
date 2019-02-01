@@ -19,7 +19,7 @@ jobs:
         app:
           master: SWE4203_SEMINAR
         on:
-          repo: sschilbe/swe4203-seminar
+          repo: sschilbe/SWE4203_SEMINAR
     - stage: test staging
       before_install:
         - sudo apt-get update
