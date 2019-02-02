@@ -38,3 +38,8 @@ nosetests.xml
 venv
 app.db
 microblog.log*
+
+# Robot logs
+log.html
+output.xml
+report.html
