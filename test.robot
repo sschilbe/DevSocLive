@@ -43,7 +43,7 @@ Sign In
     Go To           ${LOGIN_URL}
     Input Text      username        ${username}
     Input Text      password        ${password}
-    Click Button    commit
+    Click Button    submit
     
 Sign Out 
     Go To           ${LOGOUT_URL}
