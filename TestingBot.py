@@ -7,7 +7,7 @@ from robot.libraries.BuiltIn import BuiltIn
 
 def report_testingbot_status(name, status, credentials):
 	selenium = BuiltIn().get_library_instance('Selenium2Library')
-	session_id = selenium._current_browser().session_id
+	session_id = selenium.driver.session_id
 
 	token = base64.b64encode(credentials)
 	payload = {'test[name]': name, 'test[success]': int(status == 'PASS')}
