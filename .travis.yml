@@ -1,6 +1,6 @@
 dist: xenial
 language: python
-cache: pip
+cache: 
   directories:
     - /home/travis/.rvm/
 python:
