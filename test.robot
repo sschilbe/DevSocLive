@@ -50,7 +50,7 @@ Sign Out
 
 *** Test Cases ***
 
-Simple Test
+Sanity Test
     [Tags]  Validation
     Go to   ${ROOT_URL}
 	Page should contain  Please log in to access this page.
