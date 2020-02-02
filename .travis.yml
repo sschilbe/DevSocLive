@@ -1,6 +1,8 @@
 dist: xenial
 language: python
 cache: pip
+  directories:
+    - /home/travis/.rvm/
 python:
 - 2.7
 install:
