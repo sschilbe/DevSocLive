@@ -1,14 +1,14 @@
 <html>
     <head>
         {% if title %}
-        <title>{{ title }} - SWE 4203</title>
+        <title>{{ title }} - Welcome to the Dev Soc Social</title>
         {% else %}
-        <title>Welcome to SWE 4203</title>
+        <title>Welcome to the Dev Soc Social</title>
         {% endif %}
     </head>
     <body>
         <div>
-            SWE 4203:
+            UNB DEV SOCIETY:
             <a href="{{ url_for('index') }}">Home</a>
             {% if current_user.is_anonymous %}
             <a href="{{ url_for('login') }}">Login</a>

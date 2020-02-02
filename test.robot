@@ -24,6 +24,7 @@ ${ROOT_URL}     https://swe4203-seminar.herokuapp.com
 ${LOGIN_URL}    ${ROOT_URL}/login
 ${LOGOUT_URL}   ${ROOT_URL}/logout
 ${HOME_URL}     ${ROOT_URL}/index
+${date}         Get Current Data
 
 *** Keywords ***
 
@@ -34,6 +35,7 @@ Open test browser
 
 Close test browser
 	...  Report TestingBot status
+    ...  ${date}
 	...  ${SUITE_NAME} | ${TEST_NAME}
 	...  ${TEST_STATUS}  ${CREDENTIALS}
 	Close all browsers

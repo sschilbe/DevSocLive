@@ -5,12 +5,12 @@ import base64
 from robot.api import logger
 from robot.libraries.BuiltIn import BuiltIn
 
-def report_testingbot_status(name, status, credentials):
+def report_testingbot_status(id, name, status, credentials):
 	selenium = BuiltIn().get_library_instance('Selenium2Library')
 	session_id = selenium.driver.session_id
 
 	token = base64.b64encode(credentials)
-	payload = {'test[name]': name, 'test[success]': int(status == 'PASS')}
+	payload = {'test[name]': name, 'test[success]': int(status == 'PASS'), 'test[build]': id}
 	headers = {'Authorization': 'Basic {0}'.format(token)}
 
 	url = 'https://api.testingbot.com/v1/tests/{0}'.format(session_id)
