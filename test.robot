@@ -19,12 +19,12 @@ Test Teardown  Run keywords     Signout     Close test browser
 
 *** Variables ***
 
-${CREDENTIALS}  2122e75ff30e9d779ef243512bd9af23:47c920ba52c79428dc35680245a22a04
-${ROOT_URL}     https://swe4203-seminar.herokuapp.com
+${CREDENTIALS}  # INSERT CREDENTIALS FROM TESTINGBOT #
+${ROOT_URL}     # PUT URL FOR YOUR WEBSITE #
 ${LOGIN_URL}    ${ROOT_URL}/login
 ${LOGOUT_URL}   ${ROOT_URL}/logout
 ${HOME_URL}     ${ROOT_URL}/index
-${date}         Get Current Date
+${id}           # INSERT UNIQUE ID FOR THIS PROJECT
 
 *** Keywords ***
 
@@ -35,7 +35,7 @@ Open test browser
 
 Close test browser
 	...  Report TestingBot status
-    ...  ${date}
+    ...  ${id}
 	...  ${SUITE_NAME} | ${TEST_NAME}
 	...  ${TEST_STATUS}  ${CREDENTIALS}
 	Close all browsers

@@ -13,11 +13,11 @@ jobs:
     deploy:
       provider: heroku
       api_key:
-        secure: H5qquo60+bj5oBNvf+a8DPqmzFUKtPn9mpD86xUBQ99iqdv9DTzPiP4Jlm+kOuc/Qzw/Qyt/Va+3HUMMqt51/uUUgdLyz6+244YGSzhZax48i3LUK01pWheW0Yn5M7IuwvDEMJw/R84zInOuLZC1ikwnlKPeyLscvVuH/sKyoJOVgjI2Zg0vpKZaCxoVZg9I/0Q4YYOZtK6jixhpS5PLZMOeKtlBTQqXuJH+dXMx34jNMLnA5c8t1nXcucicbyN9GGIJha0novvAtK31jnEVni1AI6dtmQ7rpIqQ0+Vf2wbni9bmDgduTjwGVcgeGzZiLxJpb6HsEHyUgzy0wdYMVH0aaMQgoaKH18h7kK+egGU2/3zDhIR4ClMT/bq6lXgglhHhekpcWALMN1jM88d/Fc0OI6fxHZY2TykH74wJFMMMF9jNkD8EcGDpGlryUiCa71nxmd4QAllISxKXw9OhICA94DeNU0qjv6PlLGOOldigBV+0tt3BEXh8RolFe7QjF5MDYo4WQEIw+1M6cHwvvNOV+swR+zxDe9YMHGjsSAQ3O9Y95ltkxlCiKo4bJNnSKOx1nRJlZ+q9IQsHCrudOHiPClG+PxJoWHnXwE/DggfkrYLpOd5qZztH09vRQniT8sXYkpOcfsXDBrifnmoy6lCtugQoziLG7EhsgyK2Av0=
+        secure: # ENCRYPTED HEROKU API KEY #
       app:
-        master: system-testing-template
+        master: # HEROKU APP NAME #
       on:
-        repo: sschilbe/SystemTestingTemplate
+        repo: # USERNAME/REPO NAME #
   - stage: test staging
     install:
     - pip install robotframework
