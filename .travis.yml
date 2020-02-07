@@ -13,11 +13,11 @@ jobs:
     deploy:
       provider: heroku
       api_key:
-        secure: Ef4xK2jyKNjPqGKDPlSlMHdv+EO/kVIrWv3XquNAC57eyT2kRVfp08l0NKr9mJ7sB8yl2Bl02xgJCnHCc7ItKGHk+cUx4pC5vn0RdKJV+DVcs9hWcAIbP8o4h6YFT/Eo56U7Q6sxeOes5CCbOBkqcmax30MqVaBbF/xvCE/kaiNeKLvDWNPlPkamwhlRKzyOoS0MWRhUVxKJu/CQaE/DVU9wtg82fikkCuLohHOAFF3xxMPhc35k81hsdnaDS9sei6oTPcMAn+tUInz8tkSHpF1pKkVF5qQniEWLKC7nzvBiNceFSsD6J7AlXC5jshPs7vJLMkyktIJ4bhzuimHZnpXI+cJAjbJFK2Gs3gOUyYaGCNSzUFwuFsL4o5PGOX9ZgIqHaBRJ2lW82F49RcbkyP7DN+6NioYAtqXN5kxTk48XyV/pQelJvJwgOUKZXcrme2ZAoQialmA2hhij9lwIOforq0GORIkgxz2+vH7ZPKD+5lnKM00qg/vsyvIx7KYsH2eEYJq4iZH83+tjMYH8d92ScFw3vv1MI3CNjw0XLkwyyKkrvujiBWJRiCIK6gE3TELihI6hEUQxxRuMzusHaz5gR1+0z2JYPkmSrX4akk+CptU130zDzb0QddiZDMkvgr7xL1efSJQekfFwH5QVihvZPTjh4sOq7MM3pIINaso=
+        secure: eG+dFntMzktjSjRfNQZZqAZ0MTMx+0Q8r+JY/QLs+AqObY9aOMIs2isSe45l3fwqPo5nE/OYv9WzOJNL1HzSfQxnmtYNHqLfhzVi0wKXjbd/jZTb6V7f2Gygr8Sh2PKcCTbjssZ/dxqYAzzFRZgsY+Yr8Hk07RvNyfp2mX9zKLCrC6sXYx9YvYNchMSi8A/UFawylu1VnUbo+MBtTPJng4DSos9n0mFbWzpPwL5qSZAE60vYuDaQLVL7SJY66V7Vonc2j79RkWsnCYzalAfQw72ILU8q09chvhlE96vqZMMq9okW4uRlieZBLCaM1Odm/QoKANO5t2gB7aBbR4JTjjoG/99iz5JCLqEoTGlp+XtWW+AqkJyX+NmDCkYtUybVOCrf/k3AlPqpsqmTN8h1eXbSrltp6//CBzJ3UhppUGRWwgg2qKq+AQJ8ZTi4Q+C5shfI/m+8NDj7Pl6Ffoa4luv+yc53v7pDCIYNRbrFhlDOnbKg3OngRXh8+UQ0jlhwUsgwPGVFRZr9bXr8eL9oYV+UvoOCn7wZJGkEc3pA9HanK6qa0xOvcaKrmEnz5kdqJocfFaqBS7tSRsUCKyeP4CTS/n0qzwoQ+Cij83CZ8/PhZUKdbfGftRDEYSO8JT9nfuAwyNmv5ZFxGf1KAoXou3TCpmGdi+12XAEIdCsHuWU=
       app:
-        master: swe4203-seminar
+        master: system-testing-template
       on:
-        repo: sschilbe/SWE4203_SEMINAR
+        repo: sschilbe/SystemTestingTemplate
   - stage: test staging
     install:
     - pip install robotframework
