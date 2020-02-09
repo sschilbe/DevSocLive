@@ -13,7 +13,7 @@ jobs:
     deploy:
       provider: heroku
       api_key:
-        secure: BPGInfCLP4nn4MqjqfyXgWGVVSJPlzqC5o4Dj/0Yk52lAIJw28Sqr2HxcHvrRaa+tAoe04cvA4sGhpIQxlg1D++rLYn9Vho4p5yRgPiKd9udeM72hb0UuG4ZtUaFK7QD85bbpJGlrJVWXNVvLuc7mkGSIy/jS7ROmAGzElXP25HFT7BuwjcZ390Iu7tFl0mAwpxxVREP+bTBZXf4+ugCTWQ+HXEOVmTvHTECO2XrN7sxGdnImixijBPVOSebaSoX0zo7CKDqL/qPU9F1aiYKPQTnav0YCCL2TPj1G69DZWOjY5DAbsjX1UgcSq9bVbuZmJmQdIimqRtPy29TjSraaXkQcT2Q5NWw27kdm1fCumjjEChW5cQNfk/IqoeR9nR39kgRHfgdHDt7HbRxUwh9NFOWnUL9bVClZBW+AmQkyDkmE4j3OWc5sfDAlF3wWn7hBPj24x8Z/1ns98Rv+K1XJ2H/VP90H3/nhr861sXAkfpcdPIEqdP/iu8I5qzXu4K7/bcBeyKjBLXxDQCKbkuvAffmbnoxP2nmVNyS1WAYej0SoWMe7aiv3g0mBczGY2+1GAlyPiVNgz00mTbcbSLL3RFsM2sNBui6J+scXKOeOZAUvxtJJ3DJ+gfdp4grwkzxDb9wUMCC9hOu62Er4LtuI27/dm4drcUcAxJi3vLSxu4=
+        secure: d47263ee-ff93-42e6-9b44-7bd215fa446f
       app:
         master: system-testing-dev-soc-live
       on:
