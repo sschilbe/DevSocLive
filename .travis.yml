@@ -13,11 +13,11 @@ jobs:
     deploy:
       provider: heroku
       api_key:
-        secure: # ENCRYPTED HEROKU API KEY #
+        secure: KHJAsTKDNxmnJqE/fC7JXuLNaoroMN7X7uZrkIld/+7HPgSJ2kTRL7ioBuAk1/Kl2ArhtT1lr1Wt/i+3dIogii84ydq051595mQ0l98rklr0au8TjVZCd65rm3/DqQFfwW7Y0N3ky5Y/x/M0cBNrP+KIK++Y+g8jOZqhG+bc9rgWgM8Uwd2K8nWqXUK9pylV1ltHbbTM33kb+WiDMtny1g9q33eZ60B7EF23ci9RYIr319uyJOpNaqxefHcvAVMwxNpcaltkAivURnBYP6gbnfX9krVmDjnSadElqGPKn7c2V0j/Ikft60sk0XyLbGLqyCVblDz0sxyGcaWFm1rZjYDbwpIR3qQdTb1e/EkIBXWRTnraHooEVj7tfp9SYxPWCRPsl1bP2jtZirwnwHD7rFoSGDBVwvQfujP5Kj7PlCyXw27P9CErwO/oqKL6Uh4Gq3NK9uZHB3rELEYsIjiGQ8JKn0iIhVfbNovNfq9ByekFELceKk57EwPmKiwnCpXY8HwhDYBCShhusUcvPisMGw5dbMlJWa5n4VkWJuBKWHunvxjSjFH7WCxsOWZtzVjCliMxickVvUl1Dgz8G7cCE4ZwsC2gaNv8BFPwGpo+o49d0yoDxRsScMgucLm5HKFDZzag6kQpkfE+WyN5GKIgV9sFriQrKBOPKb24qE33Wdg=
       app:
-        master: # HEROKU APP NAME #
+        master: system-testing-dev-soc-live
       on:
-        repo: # USERNAME/REPO NAME #
+        repo: sschilbe/DevSocLive
   - stage: test staging
     install:
     - pip install robotframework

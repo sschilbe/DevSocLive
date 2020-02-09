@@ -19,13 +19,12 @@ Test Teardown  Run keywords     Signout     Close test browser
 
 *** Variables ***
 
-${CREDENTIALS}  # INSERT CREDENTIALS FROM TESTINGBOT #
-${ROOT_URL}     # PUT URL FOR YOUR WEBSITE #
+${CREDENTIALS}  2122e75ff30e9d779ef243512bd9af23:47c920ba52c79428dc35680245a22a04
+${ROOT_URL}     https://system-testing-dev-soc-live.herokuapp.com/
 ${LOGIN_URL}    ${ROOT_URL}/login
 ${LOGOUT_URL}   ${ROOT_URL}/logout
 ${HOME_URL}     ${ROOT_URL}/index
-${id}           # INSERT UNIQUE ID FOR THIS PROJECT
-
+${id}           Live Tests
 *** Keywords ***
 
 Open test browser
